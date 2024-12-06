@@ -88,3 +88,5 @@ class Record(models.Model):
         verbose_name_plural = 'Rekordlar'
 
 
+
+
