@@ -1,0 +1,10 @@
+<h1>Talabalar ro'yxati</h1>
+<hr>
+
+<a href="/">Bosh sahifa</a>
+
+{% for talaba in talabalar %}
+<a href="/talabalar/{{ talaba.id }}/">
+    <p>{{ forloop.counter }}. {{ talaba.ism }}</p>
+</a>
+{% endfor %}

@@ -1,0 +1,6 @@
+<h1>Kitoblar ro'yxati</h1>
+<hr>
+<a href="/">Bosh sahifa</a>
+{% for kitob in kitoblar %}
+<p>{{ forloop.counter }}. {{ kitob.nom }}</p>
+{% endfor %}
