@@ -1,4 +1,15 @@
 <h1>Talabalar ro'yxati</h1>
+
+<form>
+    <input name="search" type="text" placeholder="Ism .."
+           {% if search %} value="{{ search }}" {% endif %}
+    >
+    <button type="submit">Qidirish</button>
+    <a href="/talabalar/">
+        <button type="button">Tozalash</button>
+    </a>
+</form>
+
 <hr>
 
 <a href="/">Bosh sahifa</a>
@@ -8,3 +19,25 @@
     <p>{{ forloop.counter }}. {{ talaba.ism }}</p>
 </a>
 {% endfor %}
+
+<hr>
+<h1>Yangi talaba</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Ism:</label>
+    <input type="text" name="ism">
+    <label>Kurs:</label>
+    <input type="number" name="kurs">
+    <label>Guruh:</label>
+    <input type="text" name="guruh">
+    <br><br>
+    <label>Tel:</label>
+    <input type="text" name="telefon_raqam">
+    <label>Yosh:</label>
+    <input type="number" name="yosh">
+    <label>Kitob soni:</label>
+    <input type="number" name="kitob_soni">
+    <br><br>
+    <button>Qo'shish</button>
+</form>

@@ -1,0 +1,31 @@
+<h1>Mualliflar ro'yxati</h1>
+<hr>
+{% for muallif in mualliflar %}
+    <p>{{ forloop.counter }}. {{ muallif.ism }}</p>
+{% endfor %}
+<hr>
+<form method="post">
+    {% csrf_token %}
+    <label>Ism: </label>
+    <input name="ism" type="text">
+
+    <label>Millat: </label>
+    <input name="millat" type="text">
+
+    <label>Jins:</label>
+    <select name="jins">
+        <option>Erkak</option>
+        <option>Ayol</option>
+    </select>
+
+    <br><br>
+
+    <label>Kitob soni: </label>
+    <input name="kitob_soni" type="number">
+    <label>Tug'ilgan sana: </label>
+    <input name="t_yil" type="date">
+    <label>Tirik: </label>
+    <input name="tirik" type="checkbox">
+    <br><br>
+    <button>Qo'shish</button>
+</form>
